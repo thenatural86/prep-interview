@@ -15,9 +15,8 @@ function palindrome(str) {
   }
   if (reversed === str) {
     return true
-  } else {
-    return false
   }
+  return false
 }
 
 module.exports = palindrome
