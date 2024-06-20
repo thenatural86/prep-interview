@@ -12,7 +12,7 @@ function chunk(array, size) {
   let chunked = []
 
   for (let element of array) {
-    let last = chunked[chunked.length - 1]
+    last = chunked[chunked.length - 1]
     if (!last || last.length === size) {
       chunked.push([element])
     } else {

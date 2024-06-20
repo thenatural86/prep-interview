@@ -8,16 +8,12 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-// helper function
 function buildCharMap(str) {
-  const charMap = {}
-  // Convert the string to lower case and remove non-alphanumeric characters
-  str = str.toLowerCase().replace(/[^\w]/g, '')
+  let charMap = {}
 
   for (let char of str) {
-    charMap[char] = charMap[char] + 1 || 1
+    charMap[char] = charMap[char]++ || 1
   }
-
   return charMap
 }
 
@@ -25,7 +21,6 @@ function anagrams(stringA, stringB) {
   const charMapA = buildCharMap(stringA)
   const charMapB = buildCharMap(stringB)
 
-  // Compare the length of the character maps
   if (Object.keys(charMapA).length !== Object.keys(charMapB).length) {
     return false
   }
@@ -35,7 +30,6 @@ function anagrams(stringA, stringB) {
       return false
     }
   }
-
   return true
 }
 
