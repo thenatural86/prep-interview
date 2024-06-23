@@ -18,8 +18,8 @@ function pyramid(n) {
   let totalWidth = n * 2 - 1
   for (let row = 0; row < n; row++) {
     let level = ''
+    let midpoint = Math.floor(totalWidth / 2)
     for (let col = 0; col < totalWidth; col++) {
-      let midpoint = Math.floor(totalWidth / 2)
       if (col >= midpoint - row && col <= midpoint + row) {
         level += '#'
       } else {
