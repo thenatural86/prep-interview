@@ -9,9 +9,10 @@
 
 function vowels(str) {
   let counter = 0
-  let vowelGroup = ['a', 'e', 'i', 'o', 'u']
+  let vowelArr = ['a', 'e', 'i', 'o', 'u']
+
   for (let char of str.toLowerCase()) {
-    if (vowelGroup.includes(char)) {
+    if (vowelArr.includes(char)) {
       counter++
     }
   }
