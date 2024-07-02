@@ -28,7 +28,13 @@ function matrix(n) {
   let startRow = 0
   let endRow = n - 1
 
-  while (startCol <= endCol && startRow <= endRow) {}
+  while (startCol <= endCol && startRow <= endRow) {
+    // top row
+    for (let i = startCol; i <= endCol; i++) {
+      results[startRow][i] = counter++
+    }
+    startRow++
+  }
 }
 
 module.exports = matrix
