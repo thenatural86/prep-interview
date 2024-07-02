@@ -29,12 +29,17 @@ function matrix(n) {
   let endRow = n - 1
 
   while (startCol <= endCol && startRow <= endRow) {
-    // top row
+    // start row
     for (let i = startCol; i <= endCol; i++) {
       results[startRow][i] = counter++
     }
     startRow++
   }
+  // end col
+  for (let i = startRow; i <= endRow; i++) {
+    results[i][endCol] = counter++
+  }
+  endCol--
 }
 
 module.exports = matrix
