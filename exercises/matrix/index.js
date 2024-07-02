@@ -34,12 +34,18 @@ function matrix(n) {
       results[startRow][i] = counter++
     }
     startRow++
-  }
-  // end col
-  for (let i = startRow; i <= endRow; i++) {
-    results[i][endCol] = counter++
-  }
-  endCol--
-}
 
+    // end col
+    for (let i = startRow; i <= endRow; i++) {
+      results[i][endCol] = counter++
+    }
+    endCol--
+
+    // end row
+    for (let i = endCol; i >= startCol; i--) {
+      results[endRow][i] = counter++
+    }
+    endRow--
+  }
+}
 module.exports = matrix
