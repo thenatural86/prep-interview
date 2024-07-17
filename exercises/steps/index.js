@@ -20,7 +20,7 @@
 function steps(n) {
   for (let row = 0; row < n; row++) {
     let steps = ''
-    for (col = 0; col < n; col++) {
+    for (let col = 0; col < n; col++) {
       if (col <= row) {
         steps += '#'
       } else {
