@@ -23,30 +23,27 @@ function matrix(n) {
   }
 
   let counter = 1
-  let startCol = 0
-  let endCol = n - 1
   let startRow = 0
   let endRow = n - 1
+  let startCol = 0
+  let endCol = n - 1
 
-  while (startCol <= endCol && startRow <= endRow) {
+  while (startRow <= endRow && startCol <= endCol) {
     // start row
     for (let i = startCol; i <= endCol; i++) {
       results[startRow][i] = counter++
     }
     startRow++
-
     // end col
     for (let i = startRow; i <= endRow; i++) {
       results[i][endCol] = counter++
     }
     endCol--
-
     // end row
     for (let i = endCol; i >= startCol; i--) {
       results[endRow][i] = counter++
     }
     endRow--
-
     // start col
     for (let i = endRow; i >= startRow; i--) {
       results[i][startCol] = counter++
